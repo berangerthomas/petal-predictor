@@ -25,7 +25,7 @@ git clone https://github.com/berangerthomas/petal-predictor
 Ensuite, accédez au répertoire racine du projet et démarrer les services en exécutant la commande suivante :
 
 ```bash
-docker-compose up --build
+docker-compose up
 ```
 
 Cette commande construira les images Docker nécessaires et démarrera les services définis dans le fichier `docker-compose.yml`.
