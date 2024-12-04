@@ -1,4 +1,4 @@
-# ⚡⚡⚡ Petal predictor ⚡⚡⚡
+# ⚡⚡⚡ Petal predictor™ ⚡⚡⚡
 
 Le futur de l'horticulture.
 
