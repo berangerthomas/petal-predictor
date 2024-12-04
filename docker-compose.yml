@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  server:
+    image: prediris-server
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    ports:
+      - 8000:8000
+
+  client:
+    image: prediris-client
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    ports:
+      - 8501:8501
