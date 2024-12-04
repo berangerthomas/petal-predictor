@@ -2,9 +2,11 @@
 
 Le futur de l'horticulture.
 
-Vous ne vendez que des iris ? Ce service est fait pour vous. En mesurant les caractéristiques de vos specimens d'iridaceae, notre intelligence artificielle prédit leur espèce avec une précision qui ferait pâlir un botaniste ! Plus besoin de louper une vente, notre algorithme connaît chaque pétale comme sa poche. Iris setosa, versicolor ou virginica ? Plus fiable qu'un jardinier à la retraite, Petal predictor™ vous donnera la réponse en un instant !
+Vous ne vendez que des iris ? Ce service est fait pour vous. Mesurer les caractéristiques de vos specimens d'iridaceae, et notre intelligence artificielle prédira leur espèce avec une précision qui ferait pâlir un botaniste !
 
-La puissance de l'IA au service des plantes... c'est ⚡⚡⚡ Petal predictor™ ⚡⚡⚡ !
+Iris setosa, versicolor ou virginica ? Plus fiable qu'un jardinier à la retraite, Petal predictor™ vous donnera la réponse en un instant !
+
+Petal predictor™, la puissance de l'IA au service des plantes.
 
 ## Prérequis
 
@@ -18,15 +20,9 @@ Pour cloner ce projet, exécutez la commande suivante dans votre terminal :
 git clone https://github.com/berangerthomas/petal-predictor
 ```
 
-Ensuite, accédez au répertoire du projet :
-
-```bash
-cd prediris
-```
-
 ## Lancer le projet
 
-Pour démarrer les services, exécutez la commande suivante à la racine du projet :
+Ensuite, accédez au répertoire racine du projet et démarrer les services en exécutant la commande suivante :
 
 ```bash
 docker-compose up --build
