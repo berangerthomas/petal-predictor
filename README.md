@@ -22,7 +22,7 @@ git clone https://github.com/berangerthomas/petal-predictor
 
 ## Lancer le projet
 
-Ensuite, accédez au répertoire racine du projet et démarrer les services en exécutant la commande suivante :
+Lancer docker desktop, puis accédez au répertoire racine du projet et démarrer les services en exécutant la commande suivante :
 
 ```bash
 docker-compose up
