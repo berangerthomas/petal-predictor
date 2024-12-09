@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 
 
-# Function to get the list of fruits from the server
+# Fonction pour récupérer la prédiction
 def get_prediction(json_data):
     url = "http://server:8000/predict"
     try:
@@ -12,10 +12,10 @@ def get_prediction(json_data):
             return prediction
         else:
             return (
-                f"Failed to fetch fruits. Server responded with: {response.status_code}"
+                f"Impossible de récupérer la prédiction: {response.status_code}"
             )
     except requests.exceptions.RequestException as e:
-        return f"Error occurred: {e}"
+        return f"Erreur : {e}"
 
 
 # Configuration de la largeur de la page
