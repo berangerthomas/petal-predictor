@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 
 
-# Fonction pour récupérer la prédiction
+# Function to get the prediction
 def get_prediction(json_data):
     url = "http://server:8000/predict"
     try:
@@ -11,39 +11,37 @@ def get_prediction(json_data):
             prediction = response.json()
             return prediction
         else:
-            return (
-                f"Impossible de récupérer la prédiction: {response.status_code}"
-            )
+            return f"Impossible de récupérer la prédiction: {response.status_code}"
     except requests.exceptions.RequestException as e:
         return f"Erreur : {e}"
 
 
-# Configuration de la largeur de la page
-st.set_page_config(layout="wide")  # Ou wide pour prendre toute la largeur
+# Configure the page width
+st.set_page_config(layout="wide")  # Or wide to take the full width
 
-# Titre
-st.title("Prédiction de l'espèce Iris")
+# Title
+st.title("Iris Species Prediction")
 
-# infos sous le titre
-st.write("Ajustez les curseurs pour modifier les caractéristiques de la fleur.")
+# Information below the title
+st.write("Adjust the sliders to modify the flower's characteristics.")
 
-# Créer deux colonnes
+# Create two columns
 col1, col2 = st.columns([2, 1])
 
 # Première colonne pour les curseurs
 with col1:
-    sepal_length = st.slider("Longueur du sépale", 4.0, 8.0, 5.8)
-    sepal_width = st.slider("Largeur du sépale", 2.0, 4.5, 3.0)
-    petal_length = st.slider("Longueur du pétale", 1.0, 7.0, 4.35)
-    petal_width = st.slider("Largeur du pétale", 0.1, 2.5, 1.3)
+    sepal_length = st.slider("Sepal length", 4.0, 8.0, 5.8)
+    sepal_width = st.slider("Sepal width", 2.0, 4.5, 3.0)
+    petal_length = st.slider("Petal length", 1.0, 7.0, 4.35)
+    petal_width = st.slider("Petal width", 0.1, 2.5, 1.3)
 
-    # Bouton pour effectuer la prédiction
-    predict_button = st.button("Prédire")
+    # Button to make the prediction
+    predict_button = st.button("Predict")
 
-# Deuxième colonne pour l'image
+# Second column for the image
 with col2:
     if predict_button:
-        # Préparer les données d'entrée
+        # Prepare input data
         input_data = {
             "sepal_length": sepal_length,
             "sepal_width": sepal_width,
@@ -51,24 +49,24 @@ with col2:
             "petal_width": petal_width,
         }
 
-        # Faire appel à l'API pour la prédiction
+        # Call the API for prediction
         prediction = get_prediction(input_data)
 
-        # Récupération de l'identifiant de l'espèce prédite
+        # Retrieve the predicted species ID
         id_pred = prediction["prediction"]
 
-        # Dictionnaire pour mapper les étiquettes aux espèces
+        # Dictionary to map labels to species
         species = {0: "Iris-setosa", 1: "Iris-versicolor", 2: "Iris-virginica"}
 
-        # Afficher le résultat
-        st.write(f"L'espèce prédite est : **{species[id_pred]}**")
+        # Display the result
+        st.write(f"The predicted species is: **{species[id_pred]}**")
 
-        # Dictionnaire pour mapper les espèces aux noms de fichiers d'images
+        # Dictionary to map species to image file names
         images = {
             0: "images/iris_setosa.jpg",
             1: "images/iris_versicolor.jpg",
             2: "images/iris_virginica.jpg",
         }
 
-        # Afficher l'image correspondante
+        # Display the corresponding image
         st.image(images[id_pred], caption=f"{species[id_pred]}")

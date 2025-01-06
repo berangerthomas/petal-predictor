@@ -2,7 +2,7 @@ from fastapi import FastAPI
 import joblib
 from pydantic import BaseModel
 
-# Charger le modèle pré-entraîné
+# Load pre-trained model
 model = joblib.load("model.joblib")
 
 app = FastAPI()
@@ -15,7 +15,7 @@ class IrisFeatures(BaseModel):
     petal_width: float
 
 
-# Fonctions
+# Functions
 @app.get("/")
 async def root():
     return {"message": "Please use the /predict endpoint for predictions"}

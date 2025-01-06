@@ -1,46 +1,70 @@
 # ⚡⚡⚡ Petal predictor™ ⚡⚡⚡
 
-Le futur de l'horticulture.
+Do you only sell irises? This service is made for you. Measure the characteristics of your Iridaceae specimens, and our artificial intelligence will predict their species with accuracy that would make a botanist blush!
 
-Vous ne vendez que des iris ? Ce service est fait pour vous. Mesurer les caractéristiques de vos specimens d'iridaceae, et notre intelligence artificielle prédira leur espèce avec une précision qui ferait pâlir un botaniste !
+Iris setosa, versicolor, or virginica? More reliable than a retired gardener, Petal Predictor will give you the answer in an instant
 
-Iris setosa, versicolor ou virginica ? Plus fiable qu'un jardinier à la retraite, Petal predictor™ vous donnera la réponse en un instant !
+Petal Predictor, the power of AI serving plants.
 
-Petal predictor™, la puissance de l'IA au service des plantes.
+![Démo du produit](.github/demo.gif)
 
-## Prérequis
+## Table of Contents
 
-Avant de commencer, assurez-vous d'avoir installé Docker et Docker Compose sur votre machine.
+- [Prerequisites](#Prerequisites)
+- [Installation](#Installation)
+- [Launch program](#Launch program)
+- [Accessing services](#Accessing services)
+- [Stopping services](#Stopping services)
+- [Contribution](#contribution)
 
-## Cloner le projet
+## Prerequisites
+s
+Before you start, make sure you have [Docker desktop](https://docs.docker.com/get-started/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/) installed and running on your machine.
 
-Pour cloner ce projet, exécutez la commande suivante dans votre terminal :
+## Installation
+
+To clone this project, run the following command in your terminal :
 
 ```bash
 git clone https://github.com/berangerthomas/petal-predictor
 ```
 
-## Lancer le projet
+## Launch program
 
-Lancer docker desktop, puis accédez au répertoire racine du projet et démarrer les services en exécutant la commande suivante :
+Launch Docker Desktop, then in your command line interface, navigate to the project's root directory:
+
+```bash
+cd petal-predictor
+```
+
+then start the services by executing the following command :
 
 ```bash
 docker-compose up
 ```
 
-Cette commande construira les images Docker nécessaires et démarrera les services définis dans le fichier `docker-compose.yml`.
+This command will build the necessary Docker images and start the services defined in the `docker-compose.yml` file.
 
-## Accéder aux services
+## Accessing services
 
-- **Client (Streamlit)** : Accédez à `http://localhost:8501`
-- **Serveur API (FastAPI)** : Accédez à `http://localhost:8000`
+- **Client (Streamlit)** : launch `http://localhost:8501`
+- **API server (FastAPI)** : launch `http://localhost:8000`
 
-## Arrêter les services
+## Stopping services
 
-Pour arrêter les services, appuyez sur `Ctrl+C` dans le terminal où les services sont en cours d'exécution, puis exécutez :
+To stop the services, press `Ctrl+C` in the terminal where the services are running, then execute :
 
-```bash
+``bash
 docker-compose down
 ```
 
-Cela arrêtera et supprimera les conteneurs créés par `docker-compose up`.
+This will stop and delete the containers created by `docker-compose up`.
+
+## Contribution
+
+Contributions are welcome! To contribute:
+- Fork the project.
+- Create your feature branch (git checkout -b feature/FeatureName)..
+- Commit your changes (git commit -m 'Description of changes').
+- Push to the branch (git push origin feature/FeatureName).
+- Open a Pull Request.
