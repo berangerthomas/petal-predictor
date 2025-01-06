@@ -6,15 +6,15 @@ Iris setosa, versicolor, or virginica? More reliable than a retired gardener, Pe
 
 Petal Predictor, the power of AI serving plants.
 
-![Démo du produit](.github/demo.gif)
+![demo](.github/demo.gif)
 
 ## Table of Contents
 
 - [Prerequisites](#Prerequisites)
 - [Installation](#Installation)
-- [Launch program](#Launch program)
-- [Accessing services](#Accessing services)
-- [Stopping services](#Stopping services)
+- [Launch program](#Launch-program)
+- [Accessing services](#Accessing-services)
+- [Stopping services](#Stopping-services)
 - [Contribution](#contribution)
 
 ## Prerequisites
