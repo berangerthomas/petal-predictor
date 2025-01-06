@@ -7,7 +7,6 @@ Iris setosa, versicolor, or virginica? More reliable than a retired gardener, Pe
 Petal Predictor, the power of AI serving plants.
 
 ![demo](.github/demo.gif)
-
 ## Table of Contents
 
 - [Prerequisites](#Prerequisites)
@@ -54,7 +53,7 @@ This command will build the necessary Docker images and start the services defin
 
 To stop the services, press `Ctrl+C` in the terminal where the services are running, then execute :
 
-``bash
+```bash
 docker-compose down
 ```
 
