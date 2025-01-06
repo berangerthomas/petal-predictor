@@ -31,18 +31,32 @@ git clone https://github.com/berangerthomas/petal-predictor
 ## Launch program
 
 Launch Docker Desktop, then in your command line interface, navigate to the project's root directory:
-
 ```bash
 cd petal-predictor
 ```
 
-then start the services by executing the following command :
-
+start the services by executing the following command :
 ```bash
 docker-compose up
 ```
 
 This command will build the necessary Docker images and start the services defined in the `docker-compose.yml` file.
+
+
+Alternatively, if you have already launched the program at least once and would like to benefit from improvements, here's the procedure:
+
+1. Navigate to your local directory containing petal-predictor, and type:
+```bash
+git pull
+```
+
+2. Then you'll need to rebuild the Docker images. Simply type:
+```bash
+docker-compose up --build
+```
+
+This will rebuild the images and immediately launch the program..
+
 
 ## Accessing services
 
