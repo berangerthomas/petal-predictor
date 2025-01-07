@@ -18,7 +18,7 @@ Petal Predictor, the power of AI serving plants.
 
 ## Prerequisites
 
-Before you start, make sure you have [Docker desktop](https://docs.docker.com/get-started/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/) installed and running on your machine.
+Before you start, make sure you have [Docker desktop](https://docs.docker.com/get-started/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/) installed on your machine. Docker desktop should be running, docker compose should be operationnal and executable on your machine.
 
 ## Installation
 
