@@ -3,7 +3,7 @@ import joblib
 from pydantic import BaseModel
 
 # Load pre-trained model
-model = joblib.load("model.joblib")
+model = joblib.load("rf.joblib")
 
 app = FastAPI()
 
