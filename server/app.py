@@ -40,3 +40,9 @@ def predict(features: IrisFeatures):
         return {"prediction": int(prediction[0])}
     except Exception as e:
         return {"error": str(e)}
+
+
+# Version endpoint showing the model
+@app.get("/version")
+async def version():
+    return {"version": "RF"}

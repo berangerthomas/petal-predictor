@@ -20,7 +20,7 @@ def get_prediction(json_data):
 st.set_page_config(layout="wide")  # Or wide to take the full width
 
 # Title
-st.title("Iris Species Prediction")
+st.title("Iris Species Prediction using RF")
 
 # Information below the title
 st.write("Adjust the sliders to modify the flower's characteristics.")
